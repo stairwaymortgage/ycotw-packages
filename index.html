@@ -805,10 +805,25 @@
   const AUDIO_SRC = "/audio/ambient.mp3";
   const btn = document.getElementById('musicBtn');
   const label = document.getElementById('musicLabel');
-  let audio = null, playing = false;
-  btn.addEventListener('click', () => {
-    if (!AUDIO_SRC) { playing=!playing; btn.classList.toggle('playing',playing); label.textContent=playing?'Sound Off':'Sound On'; return; }
-    if (!audio) { audio = new Audio(AUDIO_SRC); audio.loop = true; audio.volume = 0.35; }
+  const audio = new Audio(AUDIO_SRC); audio.loop = true; audio.volume = 0.35;
+  let playing = false;
+
+  // Autoplay on first user interaction (browsers block autoplay before interaction)
+  function startAudio() {
+    if (playing) return;
+    audio.play().then(() => {
+      playing = true; btn.classList.add('playing'); label.textContent = 'Sound Off';
+    }).catch(()=>{});
+    document.removeEventListener('click', startAudio);
+    document.removeEventListener('scroll', startAudio);
+    document.removeEventListener('touchstart', startAudio);
+  }
+  document.addEventListener('click', startAudio, { once: false });
+  document.addEventListener('scroll', startAudio, { once: false });
+  document.addEventListener('touchstart', startAudio, { once: false });
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
     if (playing) { audio.pause(); } else { audio.play().catch(()=>{}); }
     playing = !playing; btn.classList.toggle('playing', playing);
     label.textContent = playing ? 'Sound Off' : 'Sound On';
