@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buying a Yacht — Costs, Financing & Choosing the Right Vessel | YCOTW</title>
+<meta name="description" content="Everything you need before you buy a yacht: real costs, how owners finance them, and how to choose between new and used. From the Yachting Capital of the World.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Oswald:wght@300;400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a141d;--abyss:#070d14;--slate:#5b6b78;--line:#e6e2d8;--paper:#fcfbf8;
+    --cream:#f1ece1;--deep:#0d2236;--deep2:#16395a;--gold:#c2a25c;--gold-br:#ddbd7d;--teal:#15605c;--mist:#aebfcb;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+  a{color:inherit}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 32px}
+
+  /* top bar — minimal, matches home */
+  nav{position:sticky;top:0;z-index:50;background:rgba(252,251,248,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:1140px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between}
+  .mark{font-family:'Cormorant Garamond';font-weight:600;font-size:1.25rem;letter-spacing:.26em;color:var(--deep);text-decoration:none}
+  .mark b{color:var(--gold)}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{text-decoration:none;color:var(--slate);font-size:.86rem;font-weight:600}
+  .nav-links a:hover{color:var(--deep)}
+  .nav-links a.active{color:var(--gold)}
+  @media(max-width:760px){.nav-links{display:none}}
+
+  /* hub hero */
+  .hub-hero{background:linear-gradient(160deg,#0b1a28,#102f47 60%,#0a1a28);color:#fff;padding:80px 0 70px;position:relative;overflow:hidden}
+  .hub-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 20%,rgba(194,162,92,.14),transparent 55%)}
+  .hub-hero-in{position:relative;z-index:2}
+  .crumb{font-size:.8rem;color:var(--mist);letter-spacing:.08em;margin-bottom:22px}
+  .crumb a{color:var(--mist);text-decoration:none}.crumb a:hover{color:var(--gold-br)}
+  .hub-eye{color:var(--gold-br);font-weight:700;font-size:.78rem;letter-spacing:.26em;text-transform:uppercase;margin-bottom:16px}
+  .hub-hero h1{font-family:'Cormorant Garamond';font-weight:500;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.05;max-width:760px}
+  .hub-hero h1 em{font-style:italic;color:var(--gold-br)}
+  .hub-hero p.lead{color:var(--mist);font-size:1.15rem;max-width:580px;margin-top:22px;line-height:1.7}
+
+  /* article grid */
+  .articles{padding:70px 0}
+  .sec-eye{color:var(--gold);font-weight:700;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:12px;text-align:center}
+  .sec-title{font-family:'Oswald';font-weight:400;font-size:2.2rem;text-transform:uppercase;letter-spacing:.04em;color:var(--deep);text-align:center;margin-bottom:44px}
+  .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .art-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;transition:.18s}
+  .art-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(14,34,51,.12);border-color:#d6d0c2}
+  .art-card .ph{height:170px;position:relative;overflow:hidden}
+  .art-card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(7,16,26,.5),transparent)}
+  .art-card .body{padding:24px;flex:1;display:flex;flex-direction:column}
+  .art-card .atag{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  .art-card h3{font-family:'Cormorant Garamond';font-weight:600;font-size:1.42rem;color:var(--deep);line-height:1.2;margin-bottom:10px}
+  .art-card p{color:var(--slate);font-size:.92rem;line-height:1.55;flex:1}
+  .art-card .go{margin-top:16px;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+  @media(max-width:860px){.art-grid{grid-template-columns:1fr}}
+
+  /* ask anything / chat band */
+  .ask{background:linear-gradient(var(--deep),var(--abyss));color:#fff;padding:74px 0}
+  .ask-in{max-width:760px;margin:0 auto;text-align:center;padding:0 32px}
+  .ask h2{font-family:'Cormorant Garamond';font-weight:500;font-size:2.4rem;margin-bottom:14px}
+  .ask h2 em{font-style:italic;color:var(--gold-br)}
+  .ask p{color:var(--mist);margin-bottom:30px;font-size:1.05rem}
+  .ask-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:10px 10px 10px 22px;display:flex;align-items:center;gap:12px;max-width:600px;margin:0 auto}
+  .ask-box input{flex:1;background:transparent;border:none;outline:none;color:#fff;font-family:'Manrope';font-size:1rem;padding:14px 0}
+  .ask-box input::placeholder{color:#8ba0b0}
+  .ask-box button{background:var(--gold);color:#19130a;border:none;border-radius:10px;padding:14px 24px;font-family:'Manrope';font-weight:700;cursor:pointer;white-space:nowrap}
+  .ask-chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+  .ask-chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:30px;padding:8px 16px;font-size:.84rem;color:var(--mist);cursor:pointer;transition:.15s}
+  .ask-chip:hover{border-color:var(--gold-br);color:#fff}
+  .ask-note{margin-top:18px;font-size:.78rem;color:#6f8190}
+
+  footer{background:var(--abyss);color:var(--mist);padding:54px 0 40px}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .foot-mark{font-family:'Cormorant Garamond';font-size:1.5rem;letter-spacing:.26em;color:#fff}
+  .foot-mark b{color:var(--gold-br)}
+  .foot-col h5{color:#fff;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+  .foot-col a{display:block;color:var(--mist);text-decoration:none;font-size:.88rem;margin-bottom:8px}
+  .foot-fine{margin-top:22px;font-size:.76rem;color:#566876}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-in">
+    <a href="../Final Home Page 6.19.26.html" class="mark">Y<b>C</b>OTW</a>
+    <div class="nav-links">
+      <a href="buy-hub.html" class="active">Buy</a>
+      <a href="#">Charter</a>
+      <a href="#">Sell</a>
+      <a href="#">Learn</a>
+      <a href="#">Maintain</a>
+      <a href="#">Connect</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hub-hero">
+  <div class="wrap hub-hero-in">
+    <div class="crumb"><a href="../Final Home Page 6.19.26.html">Home</a> &nbsp;/&nbsp; Buy</div>
+    <div class="hub-eye">Buying a Yacht</div>
+    <h1>Everything you need <em>before you own one</em></h1>
+    <p class="lead">Straight answers on what a yacht really costs, how owners actually pay for them, and how to choose the vessel that fits your life — from the Yachting Capital of the World.</p>
+  </div>
+</header>
+
+<section class="articles">
+  <div class="wrap">
+    <div class="sec-eye">Start Here</div>
+    <h2 class="sec-title">The Buyer's Essentials</h2>
+    <div class="art-grid">
+      <a class="art-card" href="how-much-does-a-yacht-cost.html">
+        <div class="ph" style="background:linear-gradient(140deg,#16395a,#0a1e30)"></div>
+        <div class="body">
+          <span class="atag">Cost &amp; Ownership</span>
+          <h3>How much does a yacht really cost?</h3>
+          <p>Purchase price is just the beginning. Here's the honest, all-in breakdown — and the rule of thumb owners use.</p>
+          <span class="go">Read &amp; ask →</span>
+        </div>
+      </a>
+      <a class="art-card" href="how-to-finance-a-yacht.html">
+        <div class="ph" style="background:linear-gradient(140deg,#1a4566,#0c2334)"></div>
+        <div class="body">
+          <span class="atag">Financing</span>
+          <h3>How do people finance a yacht?</h3>
+          <p>Most buyers don't pay all cash. Here's how yacht lending actually works, and what it takes to qualify.</p>
+          <span class="go">Read &amp; ask →</span>
+        </div>
+      </a>
+      <a class="art-card" href="new-vs-used-yacht.html">
+        <div class="ph" style="background:linear-gradient(140deg,#13314d,#081a29)"></div>
+        <div class="body">
+          <span class="atag">New vs Used</span>
+          <h3>New or used — which is right for you?</h3>
+          <p>A new yacht depreciates the moment it leaves the dock. But used has its own traps. How to choose wisely.</p>
+          <span class="go">Read &amp; ask →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="ask">
+  <div class="ask-in">
+    <h2>Have a question about <em>buying</em>?</h2>
+    <p>Ask anything — costs, brands, financing, what to look for. Get a real answer, right now.</p>
+    <div class="ask-box">
+      <input id="askInput" placeholder="e.g. What can I get for $500k?">
+      <button onclick="askGo()">Ask</button>
+    </div>
+    <div class="ask-chips">
+      <span class="ask-chip" onclick="askChip(this)">What does a 50-foot yacht cost?</span>
+      <span class="ask-chip" onclick="askChip(this)">How much down to finance?</span>
+      <span class="ask-chip" onclick="askChip(this)">Best first yacht brands?</span>
+    </div>
+    <p class="ask-note">Instant answers, powered by AI. No email required to ask.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-mark">Y<b>C</b>OTW</div>
+        <p style="margin-top:12px;max-width:260px;font-size:.9rem">Yachting Capital of the World™<br>Fort Lauderdale, Florida</p>
+      </div>
+      <div class="foot-col"><h5>Buy</h5><a href="how-much-does-a-yacht-cost.html">Yacht costs</a><a href="how-to-finance-a-yacht.html">Financing</a><a href="new-vs-used-yacht.html">New vs used</a></div>
+      <div class="foot-col"><h5>Explore</h5><a href="#">Charter</a><a href="#">Sell</a><a href="#">Learn</a><a href="#">Maintain</a><a href="#">Connect</a></div>
+      <div class="foot-col"><h5>YCOTW</h5><a href="../Final Home Page 6.19.26.html">Home</a><a href="#">Community</a><a href="#">About</a></div>
+    </div>
+    <div class="foot-fine">ycotw.com · #YCOTW · Everything worth knowing about life on the water.</div>
+  </div>
+</footer>
+
+<script>
+  function askGo(){
+    const v=document.getElementById('askInput').value.trim();
+    if(!v) return;
+    // PHASE 2: this is where the Claude API chat opens. For now, a friendly placeholder.
+    alert("In the live site, this opens an AI conversation that answers your yacht questions instantly — then offers to email you the chat. (Claude API — wired up in Phase 2.)");
+  }
+  function askChip(el){ document.getElementById('askInput').value=el.textContent; document.getElementById('askInput').focus(); }
+</script>
+</body>
+</html>

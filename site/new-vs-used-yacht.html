@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>New vs Used Yacht: Which Should You Buy? | YCOTW</title><meta name="description" content="New or used yacht? An honest comparison of depreciation, condition, surveys, and which is right for a first-time buyer."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Oswald:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+  :root{
+    --ink:#0a141d;--abyss:#070d14;--slate:#5b6b78;--line:#e6e2d8;--paper:#fcfbf8;
+    --cream:#f1ece1;--deep:#0d2236;--deep2:#16395a;--gold:#c2a25c;--gold-br:#ddbd7d;--teal:#15605c;--mist:#aebfcb;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7}
+  a{color:var(--teal)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 32px}
+  .wide{max-width:1140px;margin:0 auto;padding:0 32px}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(252,251,248,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:1140px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between}
+  .mark{font-family:'Cormorant Garamond';font-weight:600;font-size:1.25rem;letter-spacing:.26em;color:var(--deep);text-decoration:none}
+  .mark b{color:var(--gold)}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{text-decoration:none;color:var(--slate);font-size:.86rem;font-weight:600}
+  .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+  @media(max-width:760px){.nav-links{display:none}}
+
+  /* article header */
+  .art-head{background:linear-gradient(160deg,#0b1a28,#102f47 60%,#0a1a28);color:#fff;padding:60px 0 56px;position:relative;overflow:hidden}
+  .art-head::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 75% 15%,rgba(194,162,92,.13),transparent 55%)}
+  .art-head-in{position:relative;z-index:2}
+  .crumb{font-size:.8rem;color:var(--mist);letter-spacing:.06em;margin-bottom:20px}
+  .crumb a{color:var(--mist);text-decoration:none}.crumb a:hover{color:var(--gold-br)}
+  .art-tag{display:inline-block;color:var(--gold-br);font-weight:700;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+  .art-head h1{font-family:'Cormorant Garamond';font-weight:500;font-size:clamp(2.3rem,5vw,3.6rem);line-height:1.1}
+  .art-head .standfirst{color:var(--mist);font-size:1.15rem;margin-top:20px;line-height:1.7;max-width:640px}
+  .art-meta{margin-top:26px;font-size:.82rem;color:#8ba0b0;display:flex;gap:18px;align-items:center}
+
+  /* article body */
+  article{padding:56px 0 30px}
+  article h2{font-family:'Cormorant Garamond';font-weight:600;font-size:2rem;color:var(--deep);margin:44px 0 16px;line-height:1.2}
+  article h3{font-family:'Manrope';font-weight:700;font-size:1.2rem;color:var(--deep);margin:30px 0 10px}
+  article p{margin-bottom:20px;font-size:1.08rem;color:#2a3742}
+  article strong{color:var(--ink)}
+  article .lead-p{font-size:1.2rem;color:var(--ink)}
+  /* cost table */
+  .cost-table{width:100%;border-collapse:collapse;margin:26px 0;font-size:1rem;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .cost-table th{background:var(--deep);color:#fff;text-align:left;padding:14px 18px;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+  .cost-table td{padding:13px 18px;border-top:1px solid var(--line);color:#2a3742}
+  .cost-table tr:nth-child(even) td{background:var(--cream)}
+  .cost-table td:last-child{font-weight:600;color:var(--deep);white-space:nowrap}
+  /* pull quote / rule box */
+  .rule-box{background:var(--cream);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:24px 28px;margin:30px 0}
+  .rule-box .rb-label{font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .rule-box p{margin:0;font-size:1.1rem;color:var(--ink)}
+  .rule-box p em{color:var(--teal);font-style:normal;font-weight:600}
+
+  /* inline soft CTA */
+  .inline-cta{background:linear-gradient(135deg,var(--deep),var(--deep2));color:#fff;border-radius:16px;padding:34px;margin:40px 0;text-align:center}
+  .inline-cta h3{font-family:'Cormorant Garamond';font-weight:500;font-size:1.6rem;color:#fff;margin-bottom:10px}
+  .inline-cta p{color:var(--mist);font-size:.98rem;margin-bottom:20px}
+  .inline-cta .ic-form{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap}
+  .inline-cta input{flex:1;min-width:200px;padding:14px 16px;border-radius:9px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-family:'Manrope';font-size:.95rem}
+  .inline-cta input::placeholder{color:#8ba0b0}
+  .inline-cta button{background:var(--gold);color:#19130a;border:none;border-radius:9px;padding:14px 22px;font-family:'Manrope';font-weight:700;cursor:pointer;white-space:nowrap}
+
+  /* ask anything */
+  .ask{background:linear-gradient(var(--deep),var(--abyss));color:#fff;padding:64px 0}
+  .ask-in{max-width:720px;margin:0 auto;text-align:center;padding:0 32px}
+  .ask h2{font-family:'Cormorant Garamond';font-weight:500;font-size:2.2rem;margin-bottom:12px}
+  .ask h2 em{font-style:italic;color:var(--gold-br)}
+  .ask p{color:var(--mist);margin-bottom:26px}
+  .ask-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:10px 10px 10px 22px;display:flex;align-items:center;gap:12px;max-width:580px;margin:0 auto}
+  .ask-box input{flex:1;background:transparent;border:none;outline:none;color:#fff;font-family:'Manrope';font-size:1rem;padding:14px 0}
+  .ask-box input::placeholder{color:#8ba0b0}
+  .ask-box button{background:var(--gold);color:#19130a;border:none;border-radius:10px;padding:14px 24px;font-weight:700;cursor:pointer}
+  .ask-note{margin-top:16px;font-size:.78rem;color:#6f8190}
+
+  /* related */
+  .related{padding:60px 0}
+  .related h2{font-family:'Oswald';font-weight:400;font-size:1.7rem;text-transform:uppercase;letter-spacing:.04em;color:var(--deep);margin-bottom:26px;text-align:center}
+  .rel-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:0 auto}
+  .rel-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;text-decoration:none;transition:.18s}
+  .rel-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(14,34,51,.1)}
+  .rel-card .rt{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+  .rel-card h3{font-family:'Cormorant Garamond';font-weight:600;font-size:1.3rem;color:var(--deep);margin-top:8px;line-height:1.2}
+  @media(max-width:680px){.rel-grid{grid-template-columns:1fr}}
+
+  footer{background:var(--abyss);color:var(--mist);padding:54px 0 40px}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .foot-mark{font-family:'Cormorant Garamond';font-size:1.5rem;letter-spacing:.26em;color:#fff}
+  .foot-mark b{color:var(--gold-br)}
+  .foot-col h5{color:#fff;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+  .foot-col a{display:block;color:var(--mist);text-decoration:none;font-size:.88rem;margin-bottom:8px}
+  .foot-fine{margin-top:22px;font-size:.76rem;color:#566876}
+  .disclaimer{font-size:.8rem;color:var(--slate);font-style:italic;border-top:1px solid var(--line);padding-top:20px;margin-top:30px}
+</style></head><body><nav><div class="nav-in"><a href="../Final Home Page 6.19.26.html" class="mark">Y<b>C</b>OTW</a><div class="nav-links"><a href="buy-hub.html" class="active">Buy</a><a href="#">Charter</a><a href="#">Sell</a><a href="#">Learn</a><a href="#">Maintain</a><a href="#">Connect</a></div></div></nav><header class="art-head"><div class="wrap art-head-in"><div class="crumb"><a href="../Final Home Page 6.19.26.html">Home</a> &nbsp;/&nbsp; <a href="buy-hub.html">Buy</a> &nbsp;/&nbsp; New vs Used</div><span class="art-tag">New vs Used</span><h1>New or used — which is right for you?</h1><p class="standfirst">A new yacht depreciates the moment it leaves the dock. But a used one carries its own risks. Here's how to choose the right side of this fork.</p><div class="art-meta"><span>Updated June 2026</span><span>·</span><span>5 min read</span></div></div></header><article><div class="wrap"><p class="lead-p">It's the first real fork every yacht buyer faces: a gleaming new boat, or a well-kept used one for a fraction of the price? Both are right answers — for different people.</p>
+<h2>The case for new</h2>
+<p>A new yacht is exactly what you want it to be: the latest systems, a full warranty, no previous owner's compromises, and that indescribable feeling of being the first to step aboard. You choose the configuration, the finishes, the electronics. Nothing is worn, nothing is hidden.</p>
+<p>The cost of all that is <strong>depreciation</strong>. Like a new car, a new yacht loses a significant chunk of its value the moment it becomes "used" — the day it leaves the dealer. For the first few years of ownership, you're absorbing that drop.</p>
+<h2>The case for used</h2>
+<p>A used yacht lets someone else take the depreciation hit. A boat that's a few years old can cost dramatically less than its new equivalent while being, mechanically, nearly the same vessel. For most first-time buyers, used is the financially smarter entry point — you get more boat for the money, and you're buying after the steepest depreciation has already happened.</p>
+<div class="rule-box"><div class="rb-label">The Depreciation Reality</div><p>A new yacht's steepest value drop happens in its <em>first few years</em>. Buy a gently-used boat and you let the original owner absorb that — often the single biggest saving available to a buyer.</p></div>
+<h2>The catch with used: condition is everything</h2>
+<p>The risk with used is that a yacht is a complex machine that's been sitting in saltwater. Problems hide. This is why the <strong>marine survey</strong> is non-negotiable on a used purchase — a professional inspection that tells you what you're really buying. A clean survey on a well-maintained used yacht is one of the best buys in the market. A skipped survey on a neglected one is how people inherit five-figure repair bills.</p>
+<div class="inline-cta"><h3>Not sure which way to go?</h3><p>Tell us your budget and what you want to do with the boat, and we'll send guidance on whether new or used fits you better.</p><div class="ic-form"><input type="email" placeholder="Your email"><button onclick="alert('Live site captures email and sends tailored guidance. (Phase 2.)')">Send my guidance</button></div></div>
+<h2>So which should you choose?</h2>
+<p>If you value being first, want the newest systems, and the depreciation doesn't trouble you — buy new. If you want the most boat for your money and you're comfortable doing your homework (and getting a thorough survey), used is usually the smarter play, especially for a first yacht. Most experienced owners will tell you the sweet spot is a lightly-used yacht from a quality builder, bought after a clean survey: new enough to be trouble-free, old enough to have skipped the worst of the depreciation.</p>
+<p>Whichever you choose, the cost of <em>owning</em> her is similar either way — which is why understanding the <a href="how-much-does-a-yacht-cost.html">true cost of ownership</a> matters more than the new-versus-used question itself.</p></div></article><section class="ask"><div class="ask-in"><h2>Have a question about <em>your</em> situation?</h2><p>Ask anything and get a real answer instantly.</p><div class="ask-box"><input id="askInput" placeholder="Ask your yacht question..."><button onclick="askGo()">Ask</button></div><p class="ask-note">Instant answers, powered by AI. No email required to ask.</p></div></section><section class="related"><div class="wide"><h2>Keep Reading</h2><div class="rel-grid"><a class="rel-card" href="how-much-does-a-yacht-cost.html"><div class="rt">Cost</div><h3>How much does a yacht really cost?</h3></a><a class="rel-card" href="how-to-finance-a-yacht.html"><div class="rt">Financing</div><h3>How do people finance a yacht?</h3></a></div></div></section><footer><div class="wide"><div class="foot-top"><div><div class="foot-mark">Y<b>C</b>OTW</div><p style="margin-top:12px;max-width:260px;font-size:.9rem">Yachting Capital of the World™<br>Fort Lauderdale, Florida</p></div><div class="foot-col"><h5>Buy</h5><a href="how-much-does-a-yacht-cost.html">Yacht costs</a><a href="how-to-finance-a-yacht.html">Financing</a><a href="new-vs-used-yacht.html">New vs used</a></div><div class="foot-col"><h5>YCOTW</h5><a href="buy-hub.html">Buy hub</a><a href="../Final Home Page 6.19.26.html">Home</a><a href="#">Community</a></div></div><p class="disclaimer">General information for planning purposes, not financial advice. Figures vary by vessel, location, and use.</p><div class="foot-fine">ycotw.com · #YCOTW · Everything worth knowing about life on the water.</div></div></footer><script>function askGo(){const v=document.getElementById('askInput').value.trim();if(!v)return;alert("In the live site, this opens an AI conversation that answers instantly — then offers to email you the chat. (Claude API — Phase 2.)");}</script></body></html>
