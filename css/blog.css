@@ -1,0 +1,84 @@
+/* ============================================================
+   YCOTW — Blog (The Logbook) shared styles
+   Matches the site's self-contained page look (Cormorant/Oswald/Manrope,
+   deep-navy + gold palette). Used by /site/blog and /site/blog/{slug}.
+   Blog pages use ABSOLUTE nav paths (/site/..., /) so the one template
+   works whether it sits at /site/blog or /site/blog/{slug}.
+   YACHT CONTENT ONLY — no financial-services / Stairway references.
+   ============================================================ */
+:root{
+  --ink:#0a141d;--abyss:#070d14;--slate:#5b6b78;--line:#e6e2d8;--paper:#fcfbf8;
+  --cream:#f1ece1;--deep:#0d2236;--deep2:#16395a;--gold:#c2a25c;--gold-br:#ddbd7d;--teal:#15605c;--mist:#aebfcb;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7}
+a{color:var(--teal)}
+.wrap{max-width:768px;margin:0 auto;padding:0 32px}
+.wide{max-width:1140px;margin:0 auto;padding:0 32px}
+nav{position:sticky;top:0;z-index:50;background:rgba(252,251,248,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1140px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between}
+.mark{font-family:'Cormorant Garamond';font-weight:600;font-size:1.25rem;letter-spacing:.26em;color:var(--deep);text-decoration:none}
+.mark b{color:var(--gold)}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--slate);font-size:.86rem;font-weight:600}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+@media(max-width:760px){.nav-links{display:none}}
+.art-head{background:linear-gradient(160deg,#0b1a28,#102f47 60%,#0a1a28);color:#fff;padding:58px 0 52px;position:relative;overflow:hidden}
+.art-head::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 75% 15%,rgba(194,162,92,.13),transparent 55%)}
+.art-head-in{position:relative;z-index:2}
+.crumb{font-size:.8rem;color:var(--mist);letter-spacing:.06em;margin-bottom:18px}
+.crumb a{color:var(--mist);text-decoration:none}.crumb a:hover{color:var(--gold-br)}
+.art-tag{display:inline-block;color:var(--gold-br);font-weight:700;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px}
+.art-head h1{font-family:'Cormorant Garamond';font-weight:500;font-size:clamp(2.2rem,4.6vw,3.4rem);line-height:1.1}
+.art-head .standfirst{color:var(--mist);font-size:1.12rem;margin-top:18px;line-height:1.7;max-width:660px}
+.art-meta{margin-top:24px;font-size:.82rem;color:#8ba0b0;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+article{padding:40px 0 30px}
+article h2{font-family:'Cormorant Garamond';font-weight:600;font-size:1.9rem;color:var(--deep);margin:44px 0 14px;line-height:1.2;scroll-margin-top:80px}
+article h3{font-family:'Manrope';font-weight:700;font-size:1.18rem;color:var(--deep);margin:28px 0 10px}
+article p{margin-bottom:18px;font-size:1.07rem;color:#2a3742}
+article ul,article ol{margin:0 0 20px 24px}
+article li{margin-bottom:9px;font-size:1.05rem;color:#2a3742}
+article strong{color:var(--ink)}
+.lead-p{font-size:1.18rem;color:var(--ink)}
+.faq{padding:20px 0 10px}
+.faq h2{font-family:'Cormorant Garamond';font-weight:600;font-size:2rem;color:var(--deep);margin-bottom:8px}
+.faq .faq-sub{color:var(--slate);margin-bottom:26px;font-size:1rem}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:20px 36px 20px 0;font-family:'Manrope';font-weight:600;font-size:1.08rem;color:var(--deep);cursor:pointer;position:relative}
+.faq-q::after{content:"+";position:absolute;right:6px;top:18px;font-size:1.4rem;color:var(--gold);font-weight:400}
+.faq-q.open::after{content:"\2212"}
+.faq-a{display:none;padding:0 0 22px;font-size:1.03rem;color:#2a3742;line-height:1.7}
+.faq-a.show{display:block}
+.ask{background:linear-gradient(var(--deep),var(--abyss));color:#fff;padding:60px 0}
+.ask-in{max-width:720px;margin:0 auto;text-align:center;padding:0 32px}
+.ask h2{font-family:'Cormorant Garamond';font-weight:500;font-size:2.1rem;margin-bottom:12px}
+.ask h2 em{font-style:italic;color:var(--gold-br)}
+.ask p{color:var(--mist);margin-bottom:24px}
+.ask-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:9px 9px 9px 22px;display:flex;align-items:center;gap:12px;max-width:580px;margin:0 auto}
+.ask-box input{flex:1;background:transparent;border:none;outline:none;color:#fff;font-family:'Manrope';font-size:1rem;padding:13px 0}
+.ask-box input::placeholder{color:#8ba0b0}
+.ask-box button{background:var(--gold);color:#19130a;border:none;border-radius:10px;padding:13px 22px;font-weight:700;cursor:pointer}
+.ask-note{margin-top:14px;font-size:.78rem;color:#6f8190}
+footer{background:var(--abyss);color:var(--mist);padding:50px 0 38px}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-mark{font-family:'Cormorant Garamond';font-size:1.5rem;letter-spacing:.26em;color:#fff}
+.foot-mark b{color:var(--gold-br)}
+.foot-col h5{color:#fff;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.foot-col a{display:block;color:var(--mist);text-decoration:none;font-size:.88rem;margin-bottom:8px}
+.foot-fine{margin-top:20px;font-size:.76rem;color:#566876}
+.disclaimer{font-size:.8rem;color:var(--slate);font-style:italic;border-top:1px solid var(--line);padding-top:18px;margin-top:26px}
+
+/* blog index grid */
+.blog-index{padding:54px 0}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;list-style:none;margin:0;padding:0}
+.blog-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:.18s}
+.blog-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(14,34,51,.1)}
+.blog-card img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;background:var(--cream)}
+.blog-card .bc-body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px}
+.blog-card .rt{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.blog-card h2{font-family:'Cormorant Garamond';font-weight:600;font-size:1.3rem;color:var(--deep);margin:0;line-height:1.2}
+.blog-card p{font-size:.95rem;color:var(--slate);margin:0}
+.blog-card .date{font-size:.8rem;color:var(--slate);margin-top:auto}
+.blog-empty{color:var(--slate);font-size:1.05rem;padding:10px 0 30px}
+@media(max-width:760px){.blog-grid{grid-template-columns:1fr}}

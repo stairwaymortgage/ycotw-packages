@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Logbook — Yacht Guides &amp; Life on the Water | YCOTW</title>
+<meta name="description" content="The Logbook: guides, answers and stories on buying, owning, chartering and living the yacht life in the Yachting Capital of the World.">
+<link rel="canonical" href="https://ycotw.com/site/blog">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Oswald:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/blog.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"The Logbook — YCOTW","url":"https://ycotw.com/site/blog","publisher":{"@type":"Organization","name":"YCOTW — Yachting Capital of the World"}}</script>
+</head>
+<body>
+<nav>
+  <div class="nav-in">
+    <a href="/" class="mark">Y<b>C</b>OTW</a>
+    <div class="nav-links">
+      <a href="/site/buy-hub">Buy</a>
+      <a href="/site/charter-hub">Charter</a>
+      <a href="/site/sell-hub">Sell</a>
+      <a href="/site/learn-hub">Learn</a>
+      <a href="/site/maintain-hub">Maintain</a>
+      <a href="/site/connect-hub">Connect</a>
+      <a href="/site/blog" class="active">Logbook</a>
+    </div>
+  </div>
+</nav>
+
+<header class="art-head">
+  <div class="wrap art-head-in">
+    <div class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; The Logbook</div>
+    <span class="art-tag">The Logbook</span>
+    <h1>Guides &amp; stories from life on the water</h1>
+    <p class="standfirst">Straight answers on buying, owning, chartering and maintaining a yacht — from the Yachting Capital of the World.</p>
+  </div>
+</header>
+
+<div class="wide blog-index">
+  <ul class="blog-grid" id="blog-grid"></ul>
+  <p class="blog-empty" id="blog-empty" hidden>New entries are on their way. In the meantime, start with <a href="/site/how-much-does-a-yacht-cost">how much a yacht costs</a> or the <a href="/site/buy-hub">Buy hub</a>.</p>
+</div>
+
+<footer>
+  <div class="wide">
+    <div class="foot-top">
+      <div>
+        <div class="foot-mark">Y<b>C</b>OTW</div>
+        <p style="margin-top:12px;max-width:260px;font-size:.9rem">Yachting Capital of the World&trade;<br>Fort Lauderdale, Florida</p>
+      </div>
+      <div class="foot-col"><h5>Explore</h5><a href="/site/blog">The Logbook</a><a href="/site/buy-hub">Buy hub</a><a href="/site/how-much-does-a-yacht-cost">Yacht costs</a></div>
+      <div class="foot-col"><h5>YCOTW</h5><a href="/">Home</a><a href="/site/connect-hub">Connect</a></div>
+    </div>
+    <div class="foot-fine">ycotw.com &middot; #YCOTW &middot; Everything worth knowing about life on the water.</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var grid = document.getElementById('blog-grid');
+  var empty = document.getElementById('blog-empty');
+  var esc = function (s) { var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; };
+  fetch('/data/blog-index.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : { posts: [] }; })
+    .then(function (data) {
+      var posts = (data && data.posts) || [];
+      posts.sort(function (a, b) { return String(b.date || '').localeCompare(String(a.date || '')); });
+      if (!posts.length) { empty.hidden = false; return; }
+      grid.innerHTML = posts.map(function (p) {
+        var href = '/site/blog/' + esc(p.slug);
+        var img = p.heroImage ? '<img src="' + esc(p.heroImage) + '" alt="' + esc(p.heroAlt || '') + '" loading="lazy">' : '';
+        var tag = p.tag ? '<span class="rt">' + esc(p.tag) + '</span>' : '';
+        var date = p.date ? '<span class="date">' + esc(p.date) + '</span>' : '';
+        return '<a class="blog-card" href="' + href + '">' + img + '<div class="bc-body">' + tag +
+          '<h2>' + esc(p.title) + '</h2><p>' + esc(p.description) + '</p>' + date + '</div></a>';
+      }).join('');
+    })
+    .catch(function () { empty.hidden = false; });
+})();
+</script>
+<script src="/js/leads.js" defer></script>
+</body>
+</html>
