@@ -41,6 +41,7 @@ article ul,article ol{margin:0 0 20px 24px}
 article li{margin-bottom:9px;font-size:1.05rem;color:#2a3742}
 article strong{color:var(--ink)}
 .lead-p{font-size:1.18rem;color:var(--ink)}
+.post-hero-img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:14px;margin:34px 0 6px;background:var(--cream)}
 .faq{padding:20px 0 10px}
 .faq h2{font-family:'Cormorant Garamond';font-weight:600;font-size:2rem;color:var(--deep);margin-bottom:8px}
 .faq .faq-sub{color:var(--slate);margin-bottom:26px;font-size:1rem}
