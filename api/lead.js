@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     const firstName = nameParts[0] || '';
     const lastName = nameParts.slice(1).join(' ') || '';
 
-    const tags = ['website-lead'];
+    const tags = ['website-lead', 'source-ycotw'];
     if (tag) tags.push(String(tag).slice(0, 60));
 
     const body = {
